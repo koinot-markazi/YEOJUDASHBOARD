@@ -3,13 +3,16 @@ Chart.defaults.global.defaultFontFamily = 'Nunito', '-apple-system,system-ui,Bli
 Chart.defaults.global.defaultFontColor = '#858796';
 
 // Pie Chart Example
+
+function getPie(dt){
+
 var ctx = document.getElementById("myPieChart");
 var myPieChart = new Chart(ctx, {
   type: 'pie',
   data: {
     labels: ["Boys", "Girls"],
     datasets: [{
-      data: [75, 25],
+      data: dt,
       backgroundColor: ['#4e73df', '#FF4444'],
       hoverBackgroundColor: ['#2e59d9', '#FF3333'],
       hoverBorderColor: "rgba(234, 236, 244, 1)",
@@ -33,3 +36,5 @@ var myPieChart = new Chart(ctx, {
     cutoutPercentage: 80,
   },
 });
+
+}

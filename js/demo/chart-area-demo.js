@@ -28,11 +28,19 @@ function number_format(number, decimals, dec_point, thousands_sep) {
 }
 
 // Area Chart Example
+// var labels = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+// var data = [0, 10, 50, 100, 120, 90, 100, 40, 120, 115, 200, 190];
+
+// getCTX(labels, data);
+
+function getCTX(lbl, dt){
+  
+
 var ctx = document.getElementById("myAreaChart");
 var myLineChart = new Chart(ctx, {
   type: 'line',
   data: {
-    labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+    labels: lbl,
     datasets: [{
       label: "Applicants",
       lineTension: 0.3,
@@ -46,7 +54,7 @@ var myLineChart = new Chart(ctx, {
       pointHoverBorderColor: "rgba(78, 115, 223, 1)",
       pointHitRadius: 10,
       pointBorderWidth: 2,
-      data: [0, 10, 50, 100, 120, 90, 100, 40, 120, 115, 200, 190],
+      data: dt,
     }],
   },
   options: {
@@ -116,3 +124,5 @@ var myLineChart = new Chart(ctx, {
     }
   }
 });
+
+}
