@@ -1,5 +1,7 @@
-function getMap(){
-  console.log("getMap is called!");
+// function getMap(){
+  // console.log("getMap is called!");
+
+  // console.log(sumplemaps_countrymap_mapdata)
 
   var simplemaps_countrymap_mapdata={
     main_settings: {
@@ -64,7 +66,7 @@ function getMap(){
       popup_nocss: "no",
       
       //Advanced settings
-      div: "map_c",
+      div: "map",
       auto_load: "yes",
       url_new_tab: "no",
       images_directory: "default",
@@ -140,6 +142,6 @@ function getMap(){
       }
     }
   };
+  // console.log("getMap is called at the end!");
 
-  console.log("getMap is called at the end!");
-}
+// }
